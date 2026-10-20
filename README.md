@@ -138,6 +138,28 @@ Web搜索 → 农业农村部/新发地/电商平台
 
 ---
 
+## 运维与部署文档
+
+面向自行部署到 OpenClaw `skills/` 的运维同学，另备一份**可公开、低维护**的运维说明（安装/升级、触发词、数据源容灾链、飞书多维表格字段对齐、检查清单与排障）。
+
+- 文档包：[ops/OPS.md](ops/OPS.md) · [ops/MAINTENANCE.md](ops/MAINTENANCE.md) · [ops/CHECKLIST.md](ops/CHECKLIST.md) · [ops/CHANGELOG.md](ops/CHANGELOG.md)
+- 新人最小路径：**安装 Skill → 说「查一下大白菜价格」→ 结果在飞书卡片；（若启用）写入「酒店采购比价记录」类多维表格**
+- 维护节奏：建议每月最多主动维护 1 次；行为变更记入 [ops/CHANGELOG.md](ops/CHANGELOG.md)
+
+### 边界（请先读）
+
+| 项目 | 说明 |
+|------|------|
+| Web 版 | 查价 / 以图搜图 /（可选）导出多维表格；**无**自动下单 |
+| 本地 MCP 版 | 在 Web 能力之上可扩展自动下单、旺旺等（需本机安装） |
+| 密钥 | `bitable_token` / app secret 仅本地配置，勿提交仓库 |
+| 写表状态 | 若 `USER-GUIDE` 与 `SKILL` 对「自动写表」表述不一致，**以你环境 Base 是否真正写入为准** |
+| 非本仓 | 市场雷达、BOLG/十维类能力（如其它 radar 仓）不在本 Skill 范围 |
+
+完整运维手册、月度维护承诺与可打印检查清单见 [ops/OPS.md](ops/OPS.md)、[ops/MAINTENANCE.md](ops/MAINTENANCE.md)、[ops/CHECKLIST.md](ops/CHECKLIST.md)。
+
+---
+
 ## 📄 开源协议
 
 **MIT License** - 所有酒店均可免费使用、修改、分发
